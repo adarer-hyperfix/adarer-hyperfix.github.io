@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+
+    <title>Hyperfix | Crew location tracking systems for ships</title>
+    <meta property="og:title" content="Hyperfix | Crew location tracking systems for ships">
+
+
+    <meta name="description" content="Hyperfix | Crew location tracking systems for ships">
+    <meta name="og:description" content="Hyperfix | Crew location tracking systems for ships">
+
+
+
+
+    <meta property="og:type" content="website">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+
+
+/* Typography
+************************************/
+
+@import url("https://fonts.googleapis.com/css?family=Bitter:300,400,500,700");
+
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700");
+
+@import url("https://fonts.googleapis.com/css?family=Slabo 27px:300,400,500,700");
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,500,700");
+
+
+
+.sriracha {
+  font-family: "Lato", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #5E6A7E;
+}
+
+.sriracha h1, .sriracha .h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 4.75rem;
+  font-weight: 700;
+  color: #293241;
+}
+
+.sriracha h2, .sriracha .h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 3.0rem;
+  font-weight: 700;
+  color: #293241;
+}
+
+.sriracha h3, .sriracha .h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 2.0rem;
+  font-weight: 500;
+  color: #293241;
+}
+
+.sriracha section.quotes-section.quote-lg .quote {
+  font-family: "Slabo 27px", serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.sriracha section:not(.dark-bg).quotes-section.quote-lg .quote {
+  color: #5E6A7E;
+}
+
+.sriracha ul[data-checked] {
+  font-family: "Lato", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.sriracha header.primary-header nav a {
+  font-family: "Lato", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.sriracha header.primary-header nav a:not(.text-action), .sriracha header.primary-header nav .dropdown-icon {
+  color: #293241;
+}
+
+.sriracha footer .primary-footer, .sriracha footer .secondary-footer, .sriracha footer.landing-page-footer, .sriracha footer .primary-footer .contact-info p {
+  font-size: 1em;
+  font-family: "Lato", sans-serif;
+}
+
+.copyright {
+  font-size: 0.6em;
+  font-family: "Lato", sans-serif;
+}
+
+.sriracha footer .primary-footer .menu h4 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+}
+
+.sriracha footer .primary-footer .menu li a {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.sriracha footer.light-bg .primary-footer, .sriracha footer.light-bg .secondary-footer, .sriracha footer.light-bg.landing-page-footer, .sriracha footer.light-bg .primary-footer .contact-info p, .sriracha footer.light-bg .primary-footer .menu h4, .sriracha footer.light-bg .primary-footer .menu li a {
+  color: #293241;
+}
+
+.sriracha .blog-content, .sriracha .blog-content article, .sriracha .blog-content footer, .sriracha .blog-listing, .sriracha .blog-listing article {
+  font-family: "Slabo 27px", serif;
+  font-size: 2.0rem;
+  font-weight: 400;
+  color: #293241;
+}
+
+.sriracha .blog-content h1, .sriracha .blog-listing h1 {
+  font-family: "Bitter", serif;
+  font-size: 4.0rem;
+  font-weight: 700;
+  color: #4A4A4A;
+}
+
+.sriracha .blog-content h2, .sriracha .blog-listing h2 {
+  font-family: "Bitter", serif;
+  font-size: 3.0rem;
+  font-weight: 700;
+  color: #4A4A4A;
+}
+
+
+
+
+/* Light color actions
+************************************/
+
+
+.sriracha .button.button-primary {
+  background-color: #E11665;
+  border-color: #E11665;
+}
+
+
+
+.sriracha .button {
+  color: #E11665;
+  border-color: #E11665;
+}
+
+
+
+.sriracha .text-action,
+.sriracha .text-action:hover,
+.sriracha .icon-big-quote {
+  color: #2569E6 !important;
+}
+
+.sriracha .blog-listing a:not(.button),
+.sriracha .blog-content a:not(.button),
+.sriracha section.section a:not(.button) {
+  color: #2569E6;
+}
+
+.sriracha section.faq-section ul.faqs li.faq .removeButton:before,
+.sriracha section.faq-section ul.faqs li.faq .removeButton:after {
+  background-color: #2569E6;
+}
+
+
+
+/* Dark color actions
+************************************/
+
+
+.sriracha .dark-bg .button.button-primary {
+  background-color: #DC4822;
+  border-color: #DC4822;
+}
+
+
+
+.sriracha .dark-bg .button {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+
+
+.sriracha .dark-bg .text-action,
+.sriracha .dark-bg .text-action:hover,
+.sriracha .dark-bg .icon-big-quote {
+  color: #f29721 !important;
+}
+
+.sriracha .blog-listing .dark-bg a:not(.button),
+.sriracha .blog-content .dark-bg a:not(.button),
+.sriracha section.section.dark-bg a:not(.button),
+.sriracha section.section .dark-bg a:not(.button) {
+  color: #f29721;
+}
+
+.sriracha .dark-bg section.faq-section ul.faqs li.faq .removeButton:before,
+.sriracha .dark-bg section.faq-section ul.faqs li.faq .removeButton:after {
+  background-color: #f29721;
+}
+
+
+
+/* Header and Footer styles
+************************************/
+
+.sriracha header.primary-header {
+  background-color: #F8FAFE;
+}
+
+.sriracha footer.main-footer,
+.sriracha footer.landing-page-footer {
+  background-color: #270561;
+}
+
+
+/* Logo height and vertical positioning
+************************************/
+
+
+.sriracha header img.logo,
+.sriracha footer img.logo,
+.sriracha header .logo img,
+.sriracha footer .logo img {
+  height: 3.3em !important;
+}
+
+
+
+.sriracha header img.logo,
+.sriracha footer img.logo,
+.sriracha header .logo img,
+.sriracha footer .logo img {
+  margin-top: calc(0px * -1) !important;
+}
+
+
+
+/* Blog blockquote coloring
+************************************/
+
+
+.sriracha .blog-content blockquote {
+  border-left-color: #E11665 !important;
+}
+
+
+
+/* Highlights (<mark>)
+************************************/
+
+.sriracha mark {
+  background: linear-gradient(
+    0deg, rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0) 15%,
+    rgba(255,169,0,1) 15%,
+    rgba(255,169,0,1) 30%,
+    rgba(255,255,255,0) 30%,
+    rgba(255,255,255,0) 100%
+  );
+}
+
+
+</style>
+</head>
+<body id="spark" class="sriracha site_page">
+    <!-- Header -->
+
+
+<header class="primary-header scrolled">
+    <div class="container">
+        <div class="mobile-header">
+            <div class="logo">
+                <a href="/">
+                    <img alt="Templatize" src="/images/logo_1_dark_small_draft.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- /Header -->
+
+    <!-- Text Section -->
+
+<section class="section
+        text-section
+        dark-bg
+        
+        height-full" style="
+        background-image: url(/images/tanker.jpg);
+        
+        
+        
+        
+      ">
+
+    
+    <div class="section-background" style="background-color: #344498; opacity: 0.74;"></div>
+    
+
+    
+
+<div class="box section-box box-padding-top-8 box-padding-right-2 box-padding-bottom-8 box-padding-left-2">
+
+
+<div class="box-content text-center" style="margin-right: auto; margin-left: auto; max-width: 800px;">
+
+        
+        
+    <!-- Text -->
+    <h1>Hyperfix is building personnel tracking systems for ships</h1><p>Crew location awareness to improve safety in the event of emergencies</p>
+    
+    
+
+<div class="actions">
+    
+    <div class="buttons-container">
+        
+        <a id="top-contact-button" href="#contact" class="button button-primary">Contact info</a>
+        
+        
+    </div>
+    
+    
+    
+</div>
+
+    
+    <!-- /Text -->
+
+    </div>
+</div>
+</section>
+<!-- Callouts Section -->
+
+<section class="section
+        callouts-section
+        light-bg
+        center
+        ">
+
+    
+    <div class="section-background" style="background-color: #FFFFFF; opacity: 1;"></div>
+    
+
+    
+
+<div class="box section-box box-padding-top-8 box-padding-right-2 box-padding-bottom-8 box-padding-left-2">
+
+
+<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 1200px;">
+
+        
+        
+    <!-- Callouts -->
+    <div class="callouts">
+        
+        
+        <div class="callout">
+            <img src="images/icons8_user_groups_80.png" class="icon" alt="">
+            <h3>Key feature one</h3><p>Explain a little bit more about this <strong><em>awesome</em></strong> feature and how it relates to your use case</p>
+            
+            
+
+<div class="actions">
+    
+    
+    
+    <div class="text-action-container">
+        <a href="#" class="text-action">Get more icons at Icons8.com</a>
+    </div>
+    
+</div>
+
+            
+        </div>
+        
+        
+        
+        <div class="callout">
+            <img src="images/icons8_combo_chart_80.png" class="icon" alt="">
+            <h3>Key feature two</h3><p>Explain a little bit more about this <strong><em>awesome</em></strong> feature and how it relates to your use case</p>
+            
+            
+
+<div class="actions">
+    
+    
+    
+    <div class="text-action-container">
+        <a href="#" class="text-action">Get more icons at Icons8.com</a>
+    </div>
+    
+</div>
+
+            
+        </div>
+        
+        
+        
+        <div class="callout">
+            <img src="images/icons8_flash_on_80.png" class="icon" alt="">
+            <h3>Key feature three</h3><p>Explain a little bit more about this <strong><em>awesome</em></strong> feature and how it relates to your use case</p>
+            
+            
+
+<div class="actions">
+    
+    
+    
+    <div class="text-action-container">
+        <a href="#" class="text-action">Get more icons at Icons8.com</a>
+    </div>
+    
+</div>
+
+            
+        </div>
+        
+        
+    </div>
+    <!-- /Callouts -->
+
+    </div>
+</div>
+</section>
+<!-- Image Section -->
+
+<section class="section
+        image-section
+        light-bg
+        image-center
+        " style="
+        background-image: url(&#39;https://cdn.spark.app/media/templates/image/hero_bg_2x.jpg&#39;);
+        
+        
+        
+        
+      ">
+
+    
+    <div class="section-background" style="background-color: #FFFFFF; opacity: 0;"></div>
+    
+
+    
+
+<div class="box section-box box-padding-top-8 box-padding-right-2 box-padding-bottom-8 box-padding-left-2">
+
+
+<div class="box-content" style="margin-right: auto; margin-left: auto;">
+
+        
+        
+
+<div class="box section-header-box box-padding-top-0 box-padding-right-0 box-padding-bottom-6 box-padding-left-0">
+
+
+<div class="box-content text-center" style="margin-right: auto; margin-left: auto; max-width: 600px;">
+
+        <p>Show a fancy product screenshot, gif, or customer video below to wow readers</p><h2>Add a big reinforcing hero statement here</h2>
+        </div>
+</div>
+        
+        
+    <!-- Image -->
+    
+
+<div class="box image-box">
+
+
+<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 800px;">
+
+    
+        <img src="images/featured_image_placeholder_2_2x.png" alt="">
+    
+    </div>
+</div>
+    
+    <!-- /Image -->
+
+    </div>
+</div>
+</section>
+<!-- Image Section -->
+
+<section class="section
+        image-section
+        light-bg
+        image-left
+        " style="
+        background-image: url(&#39;https://cdn.spark.app/media/templates/image/sections_bg_2x_LtHJmm3.jpg&#39;);
+        
+        
+        
+        
+      ">
+
+    
+    <div class="section-background" style="background-color: #FFFFFF; opacity: 0;"></div>
+    
+
+    
+
+<div class="box section-box box-padding-top-8 box-padding-right-2 box-padding-bottom-8 box-padding-left-2">
+
+
+<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 1200px;">
+
+        
+        
+    <!-- Image -->
+    
+
+<div class="box image-box box-padding-right-2 box-padding-left-0">
+
+
+<div class="box-content" style="">
+
+    
+        <img src="images/screely_1557281139117.png" alt="">
+    
+    </div>
+</div>
+    
+    
+
+<div class="box copy-box box-padding-left-2 box-padding-right-0">
+
+
+<div class="box-content" style="">
+
+        <h2>Optional drill down</h2><p>Credentialize your story with customer examples so that users can see your product in action. You can also use this to highlight various use cases of your product.</p><p>We used a free tool, <a href="https://www.screely.com/">screely.com</a>, to stylize these stock photos.</p>
+        
+        
+
+<div class="actions">
+    
+    
+    
+    <div class="text-action-container">
+        <a href="#" class="text-action">Call to action here</a>
+    </div>
+    
+</div>
+
+        
+    </div>
+</div>
+    
+    <!-- /Image -->
+
+    </div>
+</div>
+</section>
+<!-- Image Section -->
+
+<section class="section
+        image-section
+        light-bg
+        image-right
+        " style="
+        background-image: url(&#39;https://cdn.spark.app/media/templates/image/sections_bg_2x.jpg&#39;);
+        
+        
+        
+        
+      ">
+
+    
+    <div class="section-background" style="background-color: #FFFFFF; opacity: 0;"></div>
+    
+
+    
+
+<div class="box section-box box-padding-top-8 box-padding-right-2 box-padding-bottom-8 box-padding-left-2">
+
+
+<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 1200px;">
+
+        
+        
+    <!-- Image -->
+    
+
+<div class="box image-box box-padding-right-0 box-padding-left-2">
+
+
+<div class="box-content" style="">
+
+    
+        <img src="images/screely_1557283248147.png" alt="">
+    
+    </div>
+</div>
+    
+    
+
+<div class="box copy-box box-padding-left-0 box-padding-right-2">
+
+
+<div class="box-content" style="">
+
+        <h2>Another optional drill down</h2><p>Credentialize your story with customer examples so that users can see your product in action. You can also use this to highlight various use cases of your product.</p><p>We used a free tool,&nbsp;<a href="https://www.screely.com/">screely.com</a>, to stylize these stock photos.</p>
+        
+        
+
+<div class="actions">
+    
+    
+    
+    <div class="text-action-container">
+        <a href="#" class="text-action">Call to action here</a>
+    </div>
+    
+</div>
+
+        
+    </div>
+</div>
+    
+    <!-- /Image -->
+
+    </div>
+</div>
+</section>
+<!-- Quotes Section -->
+
+<section class="section
+        quotes-section quote-lg
+        dark-bg
+        center
+        " style="
+        background-image: url(&#39;https://cdn.spark.app/media/templates/image/bg_pattern.jpg&#39;);
+        
+        
+        
+        
+      ">
+
+    
+    <div class="section-background" style="background-color: #344498; opacity: 0.8;"></div>
+    
+
+    
+
+<div class="box section-box box-padding-top-8 box-padding-right-2 box-padding-bottom-4 box-padding-left-2">
+
+
+<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 1200px;">
+
+        
+        
+    <!-- Quotes -->
+    <div class="quotes">
+        
+        
+        <blockquote>
+            
+                <svg class="icon-big-quote" viewBox="0 0 24 24"><path fill="currentColor" d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z"></path></svg>
+            
+            <p class="quote">[This is an example quote] - We were losing a lot of time and money doing X. [Your company] made it so easy to do [something] that we couldn't imagine what it was like ever running our business without it!
+</p>
+            <cite>
+                
+                <img class="profile" src="images/source_1_2x.png" alt="">
+                
+                <div class="info">
+                    <h4 class="source">Customer name</h4>
+                    <p class="position">Add a photo if possible, it helps!</p>
+                </div>
+            </cite>
+            
+        </blockquote>
+        
+        
+    </div>
+    <!-- /Quotes -->
+
+    </div>
+</div>
+</section>
+
+<section class="section
+        cta-section
+        dark-bg
+        cta-left
+        " style="
+        background-image: url(/images/containers.jpg);">
+
+    
+    <div class="section-background" style="background-color: #344498; opacity: 0.8;"></div>
+    
+
+    
+
+<div class="box section-box box-padding-top-8 box-padding-right-2 box-padding-bottom-8 box-padding-left-2">
+
+
+<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 1200px;">
+
+        
+        
+    <!-- CTA -->
+    <div class="content">
+        <p></p><h1>Help us improve crew safety?</h1><p>We're looking for partners to on-board as beta testers across all marine environments</p><p>If you'd to know more, or participate, please get in touch</p>
+    </div>
+    
+    
+
+<div class="actions">
+    
+    <div class="buttons-container">
+        
+        <a id="bottom-contact-button" href="#contact" class="button button-primary">Contact us for more information</a>
+        
+        
+        <!-- <a href="#" class="button button-secondary">View pricing</a> -->
+        
+    </div>
+    
+    
+    
+<!--     <div class="text-action-container">
+        <a href="#" class="text-action">See more use cases</a>
+    </div> -->
+    
+</div>
+
+    
+    <!-- /CTA -->
+
+    </div>
+</div>
+</section>
+
+    <div class="sticky-bottom-spacer"></div>
+    <!-- Footer -->
+
+
+<footer class="main-footer dark-bg">
+    <section class="primary-footer">
+        <div class="container">
+            <div class="info">
+                <a href="/" class="logo">
+                    
+                        
+                            <img src="/images/logo_1_light_small_draft.png">
+                        
+                    
+                </a>
+                <div id="contact" class="contact-info">
+                    <p>London, UK</p>
+                    <p>contact (@) hyperfix.co</p>
+                </div>
+            </div>
+            <!-- <div class="menus">
+                
+                <div class="menu">
+                    <h4>Footer section</h4>
+                    <ul>
+                        
+                        <li><a class="" href="#">Customize in elements</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="menu">
+                    <h4>Footer section</h4>
+                    <ul>
+                        
+                        <li><a class="" href="#">Customize in elements</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="menu">
+                    <h4>Footer section</h4>
+                    <ul>
+                        
+                        <li><a class="" href="#">Customize in elements</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div> -->
+        </div>
+    </section>
+    <section class="secondary-footer">
+        <div class="container">
+            <!-- Copyright -->
+<div class="copyright">
+    © Hyperfix Limited<br />
+    UK company number: 12293286
+</div>
+<!-- /Copyright -->
+            <!-- Social -->
+
+<!-- <div class="social-icons">
+    <ul>
+        
+        <li><a href="https://www.facebook.com/"><img src="images/icon-footer-facebook-inverted@2x.png" alt="Facebook"></a></li>
+        
+        <li><a href="https://twitter.com/"><img src="images/icon-footer-twitter-inverted@2x.png" alt="Twitter"></a></li>
+        
+        <li><a href="https://www.linkedin.com/"><img src="images/icon-footer-linkedin-inverted@2x.png" alt="LinkedIn"></a></li>
+        
+        <li><a href="https://www.instagram.com/"><img src="images/icon-footer-instagram-inverted@2x.png" alt="Instagram"></a></li>
+        
+        <li><a href="https://www.youtube.com/"><img src="images/icon-footer-youtube-inverted@2x.png" alt="YouTube"></a></li>
+        
+    </ul>
+</div> -->
+<!-- /Social -->
+        </div>
+    </section>
+</footer>
+<!-- /Footer -->
+    <script>
+      function animateCSS(element, animationName, callback) {
+          const node = document.querySelector(element)
+          node.classList.add('animated', animationName)
+
+          function handleAnimationEnd() {
+              node.classList.remove('animated', animationName)
+              node.removeEventListener('animationend', handleAnimationEnd)
+
+              if (typeof callback === 'function') callback()
+          }
+
+          node.addEventListener('animationend', handleAnimationEnd)
+      }
+
+      $("#top-contact-button").click(function() {
+        animateCSS("#contact", "bounce");
+      });
+
+      $("#bottom-contact-button").click(function() {
+        animateCSS("#contact", "bounce");
+      });
+    </script>
+</html>
