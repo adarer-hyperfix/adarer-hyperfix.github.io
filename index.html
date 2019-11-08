@@ -279,6 +279,76 @@
   );
 }
 
+.profile {
+  text-align: justify;
+}
+
+.profile h3 {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 50%;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.company-profile {
+  text-align: justify;
+}
+
+.company-profile h3 {
+  text-align: center;
+}
+
+.company-profile-pic {
+  width: 20%;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.company-text {
+  width: 75%;
+  margin: auto;
+}
+
+.navbox {
+  position: absolute;
+  right: 5%;
+}
+.navlink {
+  /*position: absolute;*/
+  /*right: 10%;*/
+  float: right;
+  margin-left: 1em;
+}
+
+.navlink a {
+  color: #DC4822;
+  border: 1px solid #DC4822;
+  padding: 1em;
+}
+
+.navlink a:hover {
+  color: #fff;
+  /*border: 1px solid #DC4822;*/
+  background-color: #DC4822;
+}
+
+#about {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+#introvid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
 </style>
 </head>
@@ -294,6 +364,10 @@
                     <img alt="" src="/images/logo_1_dark_small_draft.png">
                 </a>
             </div>
+            <div class="navbox">
+              <div class="navlink"><a href="#contact">Contact</a></div>
+              <div class="navlink"><a href="#about">About us</a></div>
+            </div>
         </div>
     </div>
 </header>
@@ -307,11 +381,16 @@
         
         height-full" style="
         background-image: url(/images/tanker-mid.jpg);
+        /*background-image: url(/video/ship-flyby2-cover.jpg);*/
         background-position: center;
         
         
         
       ">
+
+      <video autoplay muted loop id="introvid" poster="/video/ship-flyby2-cover.jpg">
+        <source src="/video/ship-flyby2_small.mp4" type="video/mp4">
+      </video>
 
     
     <div class="section-background" style="background-color: #344498; opacity: 0.74;"></div>
@@ -327,7 +406,9 @@
         
         
     <!-- Text -->
-    <h1>Hyperfix is building personnel tracking systems for ships</h1><p>Crew location awareness to improve safety in the event of emergencies</p>
+    <h1>Hyperfix is building personnel tracking systems for ships</h1>
+    <p>Local positioning information and crew location awareness to improve safety in the event of emergencies<br />
+    Spatial modelling systems for evacuation and drill analysis</p>
     
     
 
@@ -335,7 +416,7 @@
     
     <div class="buttons-container">
         
-        <a id="top-contact-button" href="#contact" class="button button-primary">Contact info</a>
+        <a id="top-contact-button" href="#contact" class="button button-primary">Get in touch</a>
         
         
     </div>
@@ -378,7 +459,7 @@
         <div class="callout">
             <img src="images/marine-icons/002-pin.png" class="icon" alt="">
             <h3>Precise location logs</h3>
-            <p>Accurate crew locations <strong><em>in all areas</em></strong> of your vessel. Hyperfix provides compartment-level positions for all tracked personnel throughout the entire voyage</p>
+            <p>Accurate crew location information <strong><em>in all areas</em></strong> of your vessel. Hyperfix provides compartment-level positions for all tracked personnel throughout the entire voyage</p>
         </div>
         
         
@@ -394,7 +475,7 @@
         <div class="callout">
             <img src="images/marine-icons/014-ship.png" class="icon" alt="">
             <h3>Can be integrated into any vessel</h3>
-            <p>Hyperfix does not require <strong><em>any existing network platform</em></strong> in-order to operate so installation costs are minimal</p>
+            <p>Hyperfix does not require <strong><em>any existing network platform</em></strong> in order to operate so installation costs are minimal</p>
         </div>
         
         
@@ -447,7 +528,7 @@
 <div class="box image-box">
 
 
-<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 800px;">
+<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 800px; min-height: 200px">
 
     
     </div>
@@ -558,7 +639,7 @@
 <div class="box-content" style="">
 
     
-        <img src="images/plans_and_crew_loc.png" alt="">
+        <img src="images/Hyperfix mesh diagram.png" alt="">
     
     </div>
 </div>
@@ -566,7 +647,6 @@
     
 
 <div class="box copy-box box-padding-left-0 box-padding-right-2">
-
 
 <div class="box-content" style="">
 
@@ -583,10 +663,163 @@
 </section>
 
 <section class="section
+        image-section
+        light-bg
+        image-left
+        " style="
+        background-image: url(images/sections_bg_2x_LtHJmm3.jpg);
+        
+        
+        
+        
+      ">
+
+    
+    <div class="section-background" style="background-color: #FFFFFF; opacity: 0;"></div>
+    
+
+    
+
+<div class="box section-box box-padding-top-8 box-padding-right-2 box-padding-bottom-8 box-padding-left-2">
+
+
+<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 1200px;">
+
+        
+        
+    <!-- Image -->
+    
+
+<div class="box image-box box-padding-right-2 box-padding-left-0">
+
+
+<div class="box-content" style="">
+
+    
+        <img src="images/plans_and_crew_loc.png" alt="">
+    
+    </div>
+</div>
+    
+    
+
+<div class="box copy-box box-padding-left-2 box-padding-right-0">
+
+
+<div class="box-content" style="">
+
+        <h2>Real-time location information</h2>
+        <p>Identify the location of any crew member in seconds and see a log of their previous positions. Hyperfix can provide timelines deck by deck to give unparalleled visibility into crew activity.</p>
+        <p><em>Private zones</em> can also be configured so that off-duty personnel will only be tracked once outside of them.</p>
+        
+        
+</div>
+
+        
+    </div>
+</div>
+    
+    <!-- /Image -->
+
+    </div>
+</div>
+</section>
+
+
+
+<section class="section
+        callouts-section
+        light-bg
+        center
+        ">
+
+    <div id="about"></div>
+    
+    <div class="section-background" style="background-color: #FFFFFF; opacity: 1;"></div>
+    
+
+    
+
+<div class="box section-box box-padding-top-0 box-padding-right-2 box-padding-bottom-8 box-padding-left-2">
+
+
+<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 1200px;">
+
+        
+        
+    <!-- Callouts -->
+    <hr />
+    <h2 style="text-align: center;">The Company</h2>
+    <hr />
+    <!-- <div class="callouts"> -->
+        
+        
+        <div class="callout company-profile">
+            <img src="images/logo_1_dark_draft.png" class="company-profile-pic" alt="">
+            <div class="company-text"><p>Hyperfix is a start-up born from shared interest and targeted towards creating a safer environment for mariners. The company was founded in Autumn of 2019 with a vision to create the most reliable local positioning systems for rugged environments. Our propitiatory systems are built with knowledge transferred from multiple different sectors, an approach that we believe is an industry first for marine safety technology. By combining in-depth domain expertise in commercial shipping, cyber security and machine learning, Hyperfix has the tools at hand to deliver the most robust tracking systems available on the market today.</p></div>
+        </div>    
+        
+    <!-- </div> -->
+    <!-- /Callouts -->
+
+    </div>
+</div>
+</section>
+
+<section class="section
+        callouts-section
+        light-bg
+        center
+        ">
+
+    
+    <div class="section-background" style="background-color: #FFFFFF; opacity: 1;"></div>
+    
+
+    
+
+<div class="box section-box box-padding-top-0 box-padding-right-2 box-padding-bottom-8 box-padding-left-2">
+
+
+<div class="box-content" style="margin-right: auto; margin-left: auto; max-width: 1200px;">
+
+        
+        
+    <!-- Callouts -->
+    <hr />
+    <h2 style="text-align: center;">The founders</h2>
+    <hr />
+    <div class="callouts">
+        
+        
+        <div class="callout profile">
+            <img src="images/alex-profile.jpeg" class="profile-pic" alt="">
+            <h3>Alexander Darer</h3>
+            <p>Alex holds a DPhil in Cyber Security from the University of Oxford and Masters in Computer Science from the University of Birmingham. He has extensive experience in Cyber Security consultancy and client management. Some previous projects include: developing a machine learning driven Web Application Firewall (WAF), building Cyber Security training materials and leading development of a legal Q/A search engine.<br />He has several years experience in team management and has lead numerous projects from concept to prototype to product release.</p>
+        </div>
+        
+        
+        
+        <div class="callout profile">
+            <img src="images/peter-profile.png" class="profile-pic" alt="">
+            <h3>Peter Turner</h3>
+            <p>I write modern software applications that help ship managers and crew to operate safely and efficiently.</p>
+        </div>
+        
+        
+        
+    </div>
+    <!-- /Callouts -->
+
+    </div>
+</div>
+</section>
+
+<section class="section
         cta-section
         dark-bg
-        cta-left
-        " style="
+        cta-left" 
+        style="
         background-image: url(/images/containers-mid.jpg);">
 
     
@@ -613,7 +846,7 @@
     
     <div class="buttons-container">
         
-        <a id="bottom-contact-button" href="#contact" class="button button-primary">Contact us for more information</a>
+        <a id="bottom-contact-button" href="https://forms.gle/gvCo2s3XbCgezrbp7" target="_blank" class="button button-primary">Contact us for more information</a>
     </div>
     
     
@@ -644,6 +877,7 @@
                 <div id="contact" class="contact-info">
                     <p>London, UK</p>
                     <p>contact (@) hyperfix.co</p>
+                    <p>0203 026 0312</p>
                 </div>
             </div>
         </div>
